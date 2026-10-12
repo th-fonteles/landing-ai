@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json()
 
     const result = streamText({
-        model: groq('llama-3.3-70b-versatile'), // grátis, 6000 tokens/min
+        model: groq('openai/gpt-oss-120b'), // grátis, 6000 tokens/min
         system: `Você é um expert em React e Tailwind. 
     Gere APENAS o código TSX de uma landing page completa.
     REGRAS CRÍTICAS:
